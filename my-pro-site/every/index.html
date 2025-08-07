@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my Gym app</title>
+  <link rel="stylesheet" href="style.css">
+
+<body>
+ 
+
+    <nav class="navbar">
+      <div class="logo">
+        <h1>💪 MyFitApp</h1></div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="nav-links">
+       <button onclick="showTab('workout')">تمارين</button>
+       <button onclick="showTab('food')">اكل</button>
+       <button onclick="showTab('prayer')">صلاة</button>
+       <button onclick="showTab('pushup')">push</button>
+       <button onclick="showTab('ai')">دكاء الاصطناعي</button>
+    </nav>
+    
+
+  
+
+  <main>
+    <!-- تبويب التمارين -->
+    <div id="workout" class="tab" >
+      <h2>🏋️‍♂️ جدول التمارين</h2>
+      <ul>
+        <li>السبت: ظهر و بايسبس</li>
+        <li>الاحد: صدر و ترايسبس</li>
+        <li>الاثنين:الرجل</li>
+        <li>الثلاثاء:راحة</li>
+        <li>الاربعاء:اكتاف</li>
+        <li>الخميس:سوبر7</li>
+      </ul>
+    </div>
+
+<!-- تبويب الأكل -->
+<div id="food" class="tab" >
+  <h2>🍽️ جدول الأكل والسعرات</h2>
+  <ul>
+    <li>فطور: بيض + خبز أسمر = 350 كالوري</li>
+    <li>غداء: أرز + صدر دجاج = 600 كالوري</li>
+    <li>عشاء: زبادي + تفاحة = 200 كالوري</li>
+  </ul>
+</div>
+
+<!-- تبويب الذكاء الاصطناعي -->
+<div id="ai" class="tab" >
+  <h2>🤖 مساعد الذكاء الاصطناعي</h2>
+  <input type="text" id="ai-input" placeholder="اسألني سؤال...">
+  <button id="ai-send" class="but">أرسل</button>
+  <div id="ai-response" class="but"></div>
+</div>
+
+<!-- تبويب تذكير الصلاة -->
+<div id="prayer" class="tab" >
+  <h2>🕋 أوقات الصلاة</h2>
+  
+  <div id="prayer-times">جاري تحميل مواقيت الصلاة...
+  </div>
+  
+</div>
+
+<!-- تبويب Push-Up -->
+<dive id="pushup" class="tab" >
+  <h2>💪 عداد Push-Up</h2>
+  <p>عدد الضغطات: <span id="pushup-count">0</span></p>
+  <button onclick="incrementPushup()" class="but">اضغط هنا!</button>
+  <div id="pushup-timer">00h 00m 00s</div>
+<p id="pushup-countdown">:التالي خلال ساعتان</p>
+<button id="reset-pushup"style="margin-top:10px;" class="but">اعادة تعداد</button>
+
+</div>
+  </main>
+  <script src="script.js"></script>
+  
+</body>
+</html>

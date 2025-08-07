@@ -1,0 +1,154 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  direction: rtl;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  flex-wrap: wrap;
+}
+
+.navbar button {
+  padding: 12px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.navbar button:hover {
+  background-color: #555;
+}
+
+.tab {
+  display: none;
+  padding: 30px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 90%;
+  max-width: 600px;
+  transition: all 0.3s ease;
+}
+
+/* مظهر مخصص لكل تبويبة */
+#workout {
+  background: linear-gradient(to right, #f9f9f9, #e0ffe0);
+  color: #222;
+}
+
+#food {
+  background: linear-gradient(to right, #fff4e6, #ffe6cc);
+  color: #222;
+}
+
+#prayer {
+  background: linear-gradient(to right, #e6f0ff, #d6e0f5);
+  color: #222;
+}
+
+#pushup {
+  background: linear-gradient(to right, #ffe6e6, #ffcccc);
+  color: #222;
+}
+
+/* تنسيق زر الهمبرغر */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.menu-toggle span {
+  background-color: white;
+  height: 4px;
+  margin: 4px 0;
+  border-radius: 2px;
+  width: 25px;
+  transition: 0.3s;
+}
+
+/* إظهار الزر عند الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .navbar button {
+    width: 100%;
+    text-align: right;
+    display: none;
+  }
+
+  .navbar.active button {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+}
+
+#ai {
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+#ai::before {
+  content: "🤖 الذكاء الاصطناعي";
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #00ffff;
+}
+
+/* تأثير عند الظهور */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.but{
+  background:linear-gradient(135deg,#00ffcc,#0077ff);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,255,204,0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.but:hover{
+  background: linear-gradient(135deg,#0077ff,#00ffcc);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 255, 204, 0.6);
+}
+but:active{
+  transform: scale(0.97);
+  box-shadow: 0 2px 10px rgba(0, 255, 204, 0.3);
+}
